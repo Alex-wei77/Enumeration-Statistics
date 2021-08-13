@@ -2,12 +2,12 @@
 def gl_cal(res_l):
     global res_list1
     res_list1=[]
-    global l1_l2
+    global l1_to_l2
     l1_to_l2=[]
     global ltl_string
     ltl_string=[]
     res_list1 = [m+"＆"+n for m in res_l for n in res_l]
-    while (len(l1_to_l2) < len(res_list1)):
+    while (len(l1_to_l2) < len(res_l)):
         l1_to_l2.append("")
     ltl_string= [m+n for m in res_l for n in l1_to_l2]
     for i in res_list1:
@@ -31,6 +31,7 @@ def continue_choose():
           user_input_2 = input("以空格为间隔连续输入第二次实验中所有等可能的情况：")
           list2 = [n for n in user_input_2.split()]
           gl_cal2(list2)
+          print(list2,ltl_string,res_list1,len(l1_to_l2),len(res_list1))
           status = False
         if user_choose == "NO":
           status = False    
