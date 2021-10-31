@@ -17,7 +17,7 @@ def mainLoad():
     #last_Part代表上一级事件发生的所有可能
     print("欢迎来到多级等可能实验枚举器")
     while status == True:
-        user_input = input("以空格为间隔连续输入一次实验中所有等可能的情况：")
+        user_input = input("请以空格为间隔连续输入一次实验中所有等可能的情况：")
         list1 = [n for n in user_input.split()]
         gl_cal(list1)
         continue_choose()
@@ -71,7 +71,7 @@ def continue_choose():
         status = True
         user_choose = input("是否继续运行？是请填YES，否请填NO：，重置请填写RESTART（全部大小写需统一，全部大写或全部小写）")
         if user_choose == "YES" or user_choose == 'yes':
-          user_input_2 = input("以空格为间隔连续输入第二次实验中所有等可能的情况：")
+          user_input_2 = input("请以空格为间隔连续输入第二次实验中所有等可能的情况：")
           list2 = [n for n in user_input_2.split()]
           gl_cal(list2)
           status = continue_choose()
