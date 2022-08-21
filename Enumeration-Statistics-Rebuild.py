@@ -77,7 +77,7 @@ def continue_choose():
           status = continue_choose()
         elif user_choose.lower() == "no":
             status = False
-        elif user_choose.lower() == 'RESTART':
+        elif user_choose.lower() == 'restart':
             mainLoad()
         else:
             print("请重新输入！")
