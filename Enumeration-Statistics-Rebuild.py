@@ -69,15 +69,15 @@ def gl_cal(inPut):
 def continue_choose():
         global status 
         status = True
-        user_choose = input("是否继续运行？是请填YES，否请填NO：，重置请填写RESTART（全部大小写需统一，全部大写或全部小写）")
-        if user_choose == "YES" or user_choose == 'yes':
+        user_choose = input("是否继续运行？是请填YES，否请填NO：，重置请填写RESTART")
+        if user_choose.lower() == 'yes':
           user_input_2 = input("请以空格为间隔连续输入第二次实验中所有等可能的情况：")
           list2 = [n for n in user_input_2.split()]
           gl_cal(list2)
           status = continue_choose()
-        elif user_choose == "NO" or user_choose == "no":
+        elif user_choose.lower() == "no":
             status = False
-        elif user_choose =="restart" or user_choose == 'RESTART':
+        elif user_choose.lower() == 'RESTART':
             mainLoad()
         else:
             print("请重新输入！")
